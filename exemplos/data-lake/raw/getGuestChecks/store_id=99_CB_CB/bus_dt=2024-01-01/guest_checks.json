@@ -1,0 +1,26 @@
+{
+    "busDt": "2024-01-01",
+    "storeId": "99 CB CB",
+    "guestChecks": [
+      {
+        "guestCheckId": 1122334455,
+        "chkNum": 1234,
+        "opnUTC": "2024-01-01T09:09:09",
+        "clsdUTC": "2024-01-01T12:12:12",
+        "gstCnt": 1,
+        "chkTtl": 109.9,
+        "detailLines": [
+          {
+            "guestCheckLineItemId": 9988776655,
+            "lineNum": 1,
+            "dspTtl": 119.9,
+            "menuItem": {
+              "miNum": 6042,
+              "modFlag": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

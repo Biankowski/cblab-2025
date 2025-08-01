@@ -1,0 +1,13 @@
+{
+    "busDt": "2024-01-01",
+    "storeId": "99 CB CB",
+    "invoices": [
+      {
+        "invoiceId": "INV-1001",
+        "total": 109.9,
+        "tax": 20.81,
+        "dateIssued": "2024-01-01T12:15:00"
+      }
+    ]
+  }
+  
