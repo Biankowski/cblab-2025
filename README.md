@@ -29,7 +29,10 @@ O script `etl/parse_erp_json.py` lê o JSON de exemplo e extrai os dados para po
 
 ---
 
-## 3. Estrutura do Data Lake
+## 3. Script para salvar no datalake
+O script `etl/save_to_datalake.py` salva os arquivos json no datalake de acordo com o endpoint solicitado.
+
+## 4. Estrutura do Data Lake
 
 ### Por que armazenar as respostas das APIs?
 - **Auditoria:** mantém um histórico confiável de todos os dados recebidos.
@@ -57,7 +60,7 @@ Essa estrutura facilita consultas e reprocessamento.
 
 ---
 
-## 4. Mudanças no Schema da API
+## 5. Mudanças no Schema da API
 Caso ocorram alterações no schema (ex: `taxes` → `taxation`), a ingestão deve incluir:
 - Validação de schema via JSON Schema.
 - Transformações padronizadas antes da carga no DW.
@@ -65,17 +68,21 @@ Caso ocorram alterações no schema (ex: `taxes` → `taxation`), a ingestão de
 - Armazenar sempre o JSON original para rastreabilidade
 ---
 
-## 5. Como Executar
+## 6. Como Executar
 1. Clonar o repositório
 2. Executar o SQL em `sql/tables.sql` no banco de dados.
-3. Executar o script ETL:
+3. instalar as bibliotecas:
+```bash
+pip install -r requirements.txt
+```
+4. Executar o script ETL:
 ```bash
 python etl/parse_erp_json.py
 ```
 
 ---
 
-## 6. Tecnologias Utilizadas
+## 7. Tecnologias Utilizadas
 - Python
 - PostgreSQL
 - JSON / JSON Schema
